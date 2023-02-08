@@ -13,5 +13,14 @@ class Dealership
   def add_car(car)
     self.inventory << car
   end
-  
+
+  def has_inventory?
+    if inventory.length > 0 
+      return true
+    else
+      return false
+    end
+  end
+
+
 end
