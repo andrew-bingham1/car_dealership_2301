@@ -20,4 +20,13 @@ RSpec.describe Dealership do
 
     expect(dealership.address).to eq("123 Main Street")
   end
+
+  
+  it 'has an empty inventory' do
+    dealership = Dealership.new("Acme Auto", "123 Main Street")
+
+    expect(dealership.inventory).to eq([])
+  end
+
+
 end
