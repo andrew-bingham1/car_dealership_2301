@@ -1,13 +1,11 @@
 require 'rspec'
 require './lib/car'
+require './lib/dealership'
 
-Rspec.describe Dealership do
-  describe '#initialize' do
-    it 'is a instance of dealership' do
-      dealership = Dealership.new("Acme Auto", "123 Main Street")
-      
-      expect(dealership).to be_a Dealership
-    end
-
+RSpec.describe Dealership do
+  it 'exists' do
+    dealership = Dealership.new("Acme Auto", "123 Main Street")
+    
+    expect(dealership).to be_a Dealership
   end
 end
