@@ -28,10 +28,18 @@ RSpec.describe Dealership do
     expect(dealership.inventory).to eq([])
   end
 
-  it 'can check inventory count' do
+  it 'can check inventory count1' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
 
     expect(dealership.inventory_count).to eq(0)
+  end
+
+  it 'can check inventory count2' do
+    dealership = Dealership.new("Acme Auto", "123 Main Street")
+    car_1 = Car.new("Ford Mustang", 1500, 36)
+    dealership.add_car(car_1)
+
+    expect(dealership.inventory_count).to eq(1)
   end
 
   it 'can add cars' do
