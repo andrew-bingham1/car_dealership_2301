@@ -14,6 +14,10 @@ class Dealership
     self.inventory << car
   end
 
+  def inventory_count
+    self.inventory.length
+  end
+
   def has_inventory?
     if inventory.length > 0 
       return true

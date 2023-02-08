@@ -60,5 +60,5 @@ RSpec.describe Dealership do
     expect(dealership.has_inventory?).to eq(false)
   end
 
-  it ''
+  
 end
