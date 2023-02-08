@@ -26,5 +26,11 @@ class Dealership
     end
   end
 
+  def cars_by_make(make)
+    self.inventory.find_all do |car|
+      car.make == make
+    end
+  end
+
 
 end
