@@ -40,4 +40,10 @@ class Dealership
     total_value
   end
 
+  def details
+    dealership_details = {
+      "total_value" => self.total_value,
+      "address" => self.address
+    }
+  end
 end
