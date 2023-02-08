@@ -68,5 +68,12 @@ RSpec.describe Dealership do
     expect(dealership.has_inventory?).to eq(false)
   end
 
-  
+  it 'can check cars by make' do
+    dealership = Dealership.new("Acme Auto", "123 Main Street")
+    car_1 = Car.new("Ford Mustang", 1500, 36)
+    car_2 = Car.new("Toyota Prius", 1000, 48)
+    car_3 = Car.new("Toyota Tercel", 500, 48)
+
+    expect(dealership.cars_by_make("Toyota").length).to eq(2)
+  end
 end
