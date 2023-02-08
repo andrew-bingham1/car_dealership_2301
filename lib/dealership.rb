@@ -10,4 +10,8 @@ class Dealership
     @inventory = []
   end
 
+  def add_car(car)
+    self.inventory << car
+  end
+  
 end
