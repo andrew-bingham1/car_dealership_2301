@@ -46,4 +46,11 @@ class Dealership
       "address" => self.address
     }
   end
+
+  def average_price_of_car
+    inventory_total_price = self.total_value
+    inventory_total_count = self.inventory_count
+    avg_price = inventory_total_price / inventory_total_count
+    avg_price.to_s.reverse.scan(/\d{3}|.+/).join(",").reverse
+  end
 end
